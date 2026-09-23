@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_27493fe8db127f9ddd8739150c522fbc {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_27493fe8db127f9ddd8739150c522fbc" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_27493fe8db127f9ddd8739150c522fbc = L.map(
+                "map_27493fe8db127f9ddd8739150c522fbc",
+                {
+                    center: [-2.0, 115.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+  "drawExport": false,
+  "layersControl": true,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_27493fe8db127f9ddd8739150c522fbc);
+
+            
+
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topleft",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            map_27493fe8db127f9ddd8739150c522fbc.fitBounds(
+                [[-2, 115], [-2, 115]],
+                {"maxZoom": 5}
+            );
+        
+    
+            var tile_layer_d744757cb62cb09bbc930c8a40a41528 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 24,
+  "maxNativeZoom": 24,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d744757cb62cb09bbc930c8a40a41528.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            var tile_layer_6e721b77ab3a224e78e5aa75899360e9 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/emzinnm/maps/411ad0d0136a348f0f499385bdb2b2a1-9919040c395bfcef2b18ae0a6dfaf238/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 30,
+  "maxNativeZoom": 30,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1.0,
+}
+
+            );
+        
+    
+            tile_layer_6e721b77ab3a224e78e5aa75899360e9.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            var tile_layer_cedf6a6fcb507020bff816fc0497f2f1 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/emzinnm/maps/5fed54affd9e7e2859a0f69702d9a91f-55f83c6203e80dfe920c781080afa376/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 30,
+  "maxNativeZoom": 30,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1.0,
+}
+
+            );
+        
+    
+            tile_layer_cedf6a6fcb507020bff816fc0497f2f1.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            var tile_layer_ed9ffaeca2c7de3716f71458e9b186e5 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/emzinnm/maps/c8e129d027786b8f00ad445eadfc7b84-5bcbff84b53e4493de245dad3dffacc7/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 30,
+  "maxNativeZoom": 30,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1.0,
+}
+
+            );
+        
+    
+            tile_layer_ed9ffaeca2c7de3716f71458e9b186e5.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            var tile_layer_c5659267a6d0d36c3656fd9936689e72 = L.tileLayer(
+                "https://earthengine.googleapis.com/v1/projects/emzinnm/maps/f159506465a6158cc4439d8f02f55614-e441f4276a0edf54665a2559938f3a1a/tiles/{z}/{x}/{y}",
+                {
+  "minZoom": 0,
+  "maxZoom": 30,
+  "maxNativeZoom": 30,
+  "noWrap": false,
+  "attribution": "Google Earth Engine",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1.0,
+}
+
+            );
+        
+    
+            tile_layer_c5659267a6d0d36c3656fd9936689e72.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+        L.Control.CustomControl = L.Control.extend({
+            onAdd: function(map) {
+                let div = L.DomUtil.create('div');
+                div.innerHTML = ` <div style="     background-color: rgba(255, 255, 255, 0.9);     padding: 8px 18px;     border-radius: 8px;     box-shadow: 0 2px 6px rgba(0,0,0,0.3);     font-family: times new roman;     text-align: center; ">     <div style="font-size: 15px; font-weight: bold; color: black;">         WEBGIS Indonesia     </div>     <div style="font-size: 12px; font-weight:bold; color: #444; margin-top: 2px;">         Sumber Data: USGS SRTM 30m, VIIRS, dan USDOS LSIB (Google Earth Engine)     </div> </div> `;
+                return div;
+            },
+            onRemove: function(map) {
+                // Nothing to do here
+            }
+        });
+        L.control.customControl = function(opts) {
+            return new L.Control.CustomControl(opts);
+        }
+        L.control.customControl(
+            { position: "bottomleft" }
+        ).addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+        L.Control.CustomControl = L.Control.extend({
+            onAdd: function(map) {
+                let div = L.DomUtil.create('div');
+                div.innerHTML = ` <div style="     background-color: white;     padding: 10px 14px;     border-radius: 8px;     box-shadow: 0 2px 8px rgba(0,0,0,0.3);     font-family: 'Times New Roman', Times, serif;     font-weight: bold;     color: black;     width: 220px; ">     <!-- Tombol Tab Switcher -->     <div style="display: flex; gap: 6px; margin-bottom: 10px; border-bottom: 1px solid #ddd; padding-bottom: 8px;">         <button onclick="             document.getElementById('leg-dem').style.display='block';             document.getElementById('leg-viirs').style.display='none';             this.style.background='#007bff'; this.style.color='white';             this.nextElementSibling.style.background='#e0e0e0'; this.nextElementSibling.style.color='black';         " style="flex: 1; padding: 5px; border: 1px solid #ccc; background: #007bff; color: white; border-radius: 4px; cursor: pointer; font-family: 'Times New Roman', Times, serif; font-size: 12px; font-weight: bold;">             DEM         </button>         <button onclick="             document.getElementById('leg-viirs').style.display='block';             document.getElementById('leg-dem').style.display='none';             this.style.background='#007bff'; this.style.color='white';             this.previousElementSibling.style.background='#e0e0e0'; this.previousElementSibling.style.color='black';         " style="flex: 1; padding: 5px; border: 1px solid #ccc; background: #e0e0e0; color: black; border-radius: 4px; cursor: pointer; font-family: 'Times New Roman', Times, serif; font-size: 12px; font-weight: bold;">             VIIRS         </button>     </div>      <!-- Content Legenda DEM -->     <div id="leg-dem">         <div style="font-weight: bold; font-size: 13px; margin-bottom: 6px; text-align: center; color: black;">             Elevasi (meter)         </div>         <div style="             height: 14px;             width: 100%;             border-radius: 4px;             background: linear-gradient(to right, #0000ff, #00ff00, #ffff00, #ff0000);             border: 1px solid #ccc;         "></div>         <div style="display: flex; justify-content: space-between; font-size: 11px; color: black; margin-top: 4px; font-weight: bold;">             <span>0m</span>             <span>1500m</span>             <span>3000m+</span>         </div>     </div>      <!-- Content Legenda VIIRS -->     <div id="leg-viirs" style="display: none;">         <div style="font-weight: bold; font-size: 13px; margin-bottom: 6px; text-align: center; color: black;">             Intensitas Cahaya Malam         </div>         <div style="             height: 14px;             width: 100%;             border-radius: 4px;             background: linear-gradient(to right, black, #0d0887, #6a00a8, #b12a90, #e16462, #fca636, #f0f921);             border: 1px solid #ccc;         "></div>         <div style="display: flex; justify-content: space-between; font-size: 11px; color: black; margin-top: 4px; font-weight: bold;">             <span>Gelap</span>             <span>Sedang</span>             <span>Terang</span>         </div>     </div> </div> `;
+                return div;
+            },
+            onRemove: function(map) {
+                // Nothing to do here
+            }
+        });
+        L.control.customControl = function(opts) {
+            return new L.Control.CustomControl(opts);
+        }
+        L.control.customControl(
+            { position: "bottomright" }
+        ).addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            var layer_control_ec61d5900fc6351f7aceb0e2565e86a9_layers = {
+                base_layers : {
+                },
+                overlays :  {
+                    "Esri.WorldImagery" : tile_layer_d744757cb62cb09bbc930c8a40a41528,
+                    "DEM SRTM 30m" : tile_layer_6e721b77ab3a224e78e5aa75899360e9,
+                    "Citra VIIRS" : tile_layer_cedf6a6fcb507020bff816fc0497f2f1,
+                    "Batas Negara Dunia" : tile_layer_ed9ffaeca2c7de3716f71458e9b186e5,
+                    "Batas Khusus Indonesia" : tile_layer_c5659267a6d0d36c3656fd9936689e72,
+                },
+            };
+            let layer_control_ec61d5900fc6351f7aceb0e2565e86a9 = L.control.layers(
+                layer_control_ec61d5900fc6351f7aceb0e2565e86a9_layers.base_layers,
+                layer_control_ec61d5900fc6351f7aceb0e2565e86a9_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_27493fe8db127f9ddd8739150c522fbc);
+
+        
+    
+            tile_layer_d744757cb62cb09bbc930c8a40a41528.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            tile_layer_6e721b77ab3a224e78e5aa75899360e9.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            tile_layer_cedf6a6fcb507020bff816fc0497f2f1.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            tile_layer_ed9ffaeca2c7de3716f71458e9b186e5.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+    
+            tile_layer_c5659267a6d0d36c3656fd9936689e72.addTo(map_27493fe8db127f9ddd8739150c522fbc);
+        
+</script>
+</html>
